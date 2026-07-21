@@ -8,6 +8,6 @@ video.addEventListener("click", () => {
 
 video.addEventListener("ended", () => {
 
-    window.location.href="AQUI_TU_LINK";
+    window.location.href="https://noscasamos-aleyandres.my.canva.site/";
 
 });
