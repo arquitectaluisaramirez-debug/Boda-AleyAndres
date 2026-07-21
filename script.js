@@ -14,6 +14,6 @@ document.body.addEventListener("click", () => {
 
 video.addEventListener("ended", () => {
 
-    window.location.href="https://TU-LINK-DE-CANVA";
+    window.location.href="https://noscasamos-aleyandres.my.canva.site/";
 
 });
