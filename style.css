@@ -1,3 +1,7 @@
+/* ===================================== */
+/* RESET */
+/* ===================================== */
+
 *{
     margin:0;
     padding:0;
@@ -10,14 +14,18 @@ body{
     width:100%;
     height:100%;
     overflow:hidden;
+
     background:#000;
-    font-family: "Cormorant Garamond", serif;
+
+    font-family:"Cormorant Garamond", serif;
+
+    transition:opacity .8s ease;
 
 }
 
-/* ========================= */
+/* ===================================== */
 /* VIDEO */
-/* ========================= */
+/* ===================================== */
 
 #video{
 
@@ -35,11 +43,15 @@ body{
 
     cursor:pointer;
 
+    opacity:0;
+
+    transition:opacity .8s ease;
+
 }
 
-/* ========================= */
-/* TEXTO */
-/* ========================= */
+/* ===================================== */
+/* CAPA DE TEXTO */
+/* ===================================== */
 
 .overlay{
 
@@ -47,11 +59,11 @@ body{
 
     width:100%;
 
-    top:5%;
-
     left:50%;
 
-    transform:translateX(-50%);
+    top:70%;
+
+    transform:translate(-50%,-50%);
 
     z-index:10;
 
@@ -61,67 +73,147 @@ body{
 
     pointer-events:none;
 
+    animation:aparecer 1.8s ease;
+
 }
+
+/* ===================================== */
+/* TEXTO "PARA" */
+/* ===================================== */
 
 .para{
 
     font-size:14px;
 
-    letter-spacing:4px;
-
     text-transform:uppercase;
 
-    opacity:.8;
+    letter-spacing:5px;
 
-    margin-bottom:8px;
-
-}
-
-#nombre{
-
-    font-size:34px;
-
-    font-weight:400;
-
-    letter-spacing:1px;
+    opacity:.75;
 
     margin-bottom:10px;
 
 }
 
+/* ===================================== */
+/* NOMBRE */
+/* ===================================== */
+
+#nombre{
+
+    font-size:36px;
+
+    font-weight:400;
+
+    letter-spacing:1px;
+
+    margin-bottom:12px;
+
+    text-shadow:0 2px 8px rgba(0,0,0,.25);
+
+}
+
+/* ===================================== */
+/* INSTRUCCIÓN */
+/* ===================================== */
+
 .overlay p{
 
     font-size:12px;
 
-    letter-spacing:2px;
-
     text-transform:uppercase;
 
-    opacity:.85;
+    letter-spacing:2px;
+
+    opacity:.65;
+
+    animation:respirar 2.5s infinite;
 
 }
 
-/* ========================= */
+/* ===================================== */
+/* ANIMACIÓN DE ENTRADA */
+/* ===================================== */
+
+@keyframes aparecer{
+
+    0%{
+
+        opacity:0;
+
+        transform:translate(-50%,-35%);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:translate(-50%,-50%);
+
+    }
+
+}
+
+/* ===================================== */
+/* RESPIRACIÓN */
+/* ===================================== */
+
+@keyframes respirar{
+
+    0%{
+
+        opacity:.35;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:.35;
+
+    }
+
+}
+
+/* ===================================== */
 /* CELULARES */
-/* ========================= */
+/* ===================================== */
 
 @media (max-width:768px){
 
     .overlay{
 
-        top:4%;
+        top:70%;
+
+        padding:0 25px;
+
+    }
+
+    .para{
+
+        font-size:11px;
+
+        letter-spacing:4px;
 
     }
 
     #nombre{
 
-        font-size:28px;
+        font-size:30px;
 
     }
 
     .overlay p{
 
-        font-size:11px;
+        font-size:10px;
+
+        letter-spacing:2px;
 
     }
 
