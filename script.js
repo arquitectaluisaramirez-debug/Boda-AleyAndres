@@ -1,19 +1,40 @@
 const video = document.getElementById("video");
 
-const params = new URLSearchParams(window.location.search);
+const enlaceInvitacion = "https://noscasamos-aleyandres.my.canva.site/";
 
-const nombre = params.get("nombre");
+/* ========================= */
+/* Nombre personalizado */
+/* ========================= */
 
-document.getElementById("nombre").textContent = nombre || "Nuestro invitado especial";
+const parametros = new URLSearchParams(window.location.search);
+
+const nombre = parametros.get("nombre");
+
+document.getElementById("nombre").textContent =
+    nombre || "Nuestro invitado especial";
+
+/* ========================= */
+/* Reproducir video */
+/* ========================= */
+
+let reproduciendo = false;
 
 document.body.addEventListener("click", () => {
+
+    if(reproduciendo) return;
+
+    reproduciendo = true;
 
     video.play();
 
 }, { once:true });
 
+/* ========================= */
+/* Cuando termina */
+/* ========================= */
+
 video.addEventListener("ended", () => {
 
-    window.location.href="https://noscasamos-aleyandres.my.canva.site/";
+    window.location.href = enlaceInvitacion;
 
 });
