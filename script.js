@@ -1,13 +1,13 @@
-const video=document.getElementById("video");
+const video = document.getElementById("video");
 
-video.addEventListener("click",()=>{
+video.addEventListener("click", () => {
 
-video.play();
+    video.play();
 
 });
 
-video.onended=function(){
+video.addEventListener("ended", () => {
 
-window.location.href="https://noscasamos-aleyandres.my.canva.site/";
+    window.location.href="AQUI_TU_LINK";
 
-}
+});
