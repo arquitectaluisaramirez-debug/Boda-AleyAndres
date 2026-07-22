@@ -3,42 +3,49 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Alejandra & Andrés</title>
+    <title>Alejandra & Andrés</title>
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<div class="overlay">
+    <!-- Texto personalizado -->
+    <div class="overlay">
 
-    <div class="para">
-        Para
+        <div class="para">
+            Para
+        </div>
+
+        <h1 id="nombre"></h1>
+
+        <p>
+            Toca el sello para abrir tu invitación
+        </p>
+
     </div>
 
-    <h1 id="nombre"></h1>
-
-    <p>
-        Toca el sello para descubrir tu invitación
-    </p>
-
-</div>
-
-<video
-    id="video"
-    playsinline
-    preload="auto"
+    <!-- Video -->
+    <video
+        id="video"
+        playsinline
+        preload="auto"
+        poster="poster.jpg"
+        disablepictureinpicture
+        controlslist="nodownload nofullscreen noplaybackrate"
     >
 
-    <source src="sobre.mp4" type="video/mp4">
+        <source src="sobre.mp4" type="video/mp4">
 
-</video>
+        Tu navegador no soporta videos HTML5.
 
-<script src="script.js"></script>
+    </video>
+
+    <script src="script.js"></script>
 
 </body>
 
