@@ -89,6 +89,8 @@ body{
 
     margin-bottom:10px;
 
+    color:#6F4E37;
+
 }
 
 /* ===================================== */
@@ -107,6 +109,8 @@ body{
 
     text-shadow:0 2px 8px rgba(0,0,0,.25);
 
+    color:#6F4E37;
+
 }
 
 /* ===================================== */
@@ -124,6 +128,8 @@ body{
     opacity:.65;
 
     animation:respirar 2.5s infinite;
+
+    color:#6F4E37;
 
 }
 
