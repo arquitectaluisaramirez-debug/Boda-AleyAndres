@@ -8,7 +8,7 @@ const enlaceInvitacion = "https://noscasamos-aleyandres.my.canva.site/";
 
 const parametros = new URLSearchParams(window.location.search);
 
-const nombre = parametros.get("nombre");
+const nombre = parametros.get("n");
 
 document.getElementById("nombre").textContent =
     nombre || "Nuestro invitado especial";
